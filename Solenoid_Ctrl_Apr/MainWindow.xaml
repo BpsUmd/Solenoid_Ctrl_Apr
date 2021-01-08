@@ -64,7 +64,7 @@
 
             <!--**********************************************************-->
             <Grid Grid.Column="0" Grid.Row="1">
-                <Button x:Name=""
+                <Button x:Name="BtnRun"/>
             </Grid>
         </Grid>
 
