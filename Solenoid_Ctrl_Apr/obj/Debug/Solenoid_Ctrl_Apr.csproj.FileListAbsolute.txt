@@ -1,0 +1,15 @@
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.csprojAssemblyReference.cache
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\MainWindow.g.cs
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\App.g.cs
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr_MarkupCompile.cache
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr_MarkupCompile.lref
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\bin\Debug\Solenoid_Ctrl_Apr.exe.config
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\bin\Debug\Solenoid_Ctrl_Apr.exe
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\bin\Debug\Solenoid_Ctrl_Apr.pdb
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\MainWindow.baml
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.g.resources
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.Properties.Resources.resources
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.csproj.GenerateResource.cache
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.csproj.CoreCompileInputs.cache
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.exe
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.pdb

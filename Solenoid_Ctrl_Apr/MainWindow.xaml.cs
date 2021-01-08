@@ -20,9 +20,30 @@ namespace Solenoid_Ctrl_Apr
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Btn_SetWait_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_SetLeft_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_SetRight_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnRead_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
