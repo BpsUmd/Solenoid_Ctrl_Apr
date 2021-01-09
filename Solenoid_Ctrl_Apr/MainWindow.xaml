@@ -46,22 +46,85 @@
                     <ColumnDefinition Width="10"/>
                 </Grid.ColumnDefinitions>
                 
-                <Label Grid.Row="1" Grid.Column="1" Content="wait" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-                <TextBox Grid.Row="1" Grid.Column="3" Text="0" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
-                <Label Grid.Row="1" Grid.Column="4" Content="ms" VerticalAlignment="Center"/>
-                <Button Grid.Row="1" Grid.Column="5" x:Name="Btn_SetWait" Content="set" Margin="5,5,5,5" Click="Btn_SetWait_Click" IsEnabled="False"/>
+                <Label Grid.Row="1" 
+                       Grid.Column="1" 
+                       Content="wait" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Right"/>
+                <TextBox x:Name="TxbWait" 
+                         Grid.Row="1" 
+                         Grid.Column="3" 
+                         Text="100" 
+                         VerticalAlignment="Center" 
+                         HorizontalContentAlignment="Right" 
+                         TextChanged="TxbWait_TextChanged"
+                         PreviewTextInput="Txb_LimitOnlyNumver"/>
+                <Label Grid.Row="1" 
+                       Grid.Column="4" 
+                       Content="ms" 
+                       VerticalAlignment="Center"/>
+                <Button Grid.Row="1" 
+                        Grid.Column="5" 
+                        x:Name="Btn_SetWait" 
+                        Content="set" 
+                        Margin="5,5,5,5" 
+                        Click="Btn_Set_Click"/>
 
-                <Label Grid.Row="3" Grid.Column="1" Content="Left" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-                <TextBox Grid.Row="3" Grid.Column="3" Text="0" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
-                <Label Grid.Row="3" Grid.Column="4" Content="ms" VerticalAlignment="Center"/>
-                <Button Grid.Row="3" Grid.Column="5" x:Name="Btn_SetLeft"  Content="set" Margin="5,5,5,5" Click="Btn_SetLeft_Click" IsEnabled="False"/>
+                <Label Grid.Row="3" 
+                       Grid.Column="1" 
+                       Content="Left" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Right"/>
+                <TextBox x:Name="TxbLeft" 
+                         Grid.Row="3" 
+                         Grid.Column="3" 
+                         Text="100" 
+                         VerticalAlignment="Center" 
+                         HorizontalContentAlignment="Right"
+                         TextChanged="TxbWait_TextChanged"
+                         PreviewTextInput="Txb_LimitOnlyNumver"/>
+                <Label Grid.Row="3" 
+                       Grid.Column="4" 
+                       Content="ms" 
+                       VerticalAlignment="Center"/>
+                <Button Grid.Row="3" 
+                        Grid.Column="5" 
+                        x:Name="Btn_SetLeft"  
+                        Content="set" 
+                        Margin="5,5,5,5" 
+                        Click="Btn_Set_Click"/>
 
-                <Label Grid.Row="5" Grid.Column="1" Content="Right" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-                <TextBox Grid.Row="5" Grid.Column="3" Text="0" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
-                <Label Grid.Row="5" Grid.Column="4" Content="ms" VerticalAlignment="Center"/>
-                <Button Grid.Row="5" Grid.Column="5" x:Name="Btn_SetRight"  Content="set" Margin="5,5,5,5" Click="Btn_SetRight_Click" IsEnabled="False"/>
+                <Label Grid.Row="5" 
+                       Grid.Column="1" 
+                       Content="Right" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Right"/>
+                <TextBox x:Name="TxbRight" 
+                         Grid.Row="5" 
+                         Grid.Column="3" 
+                         Text="100" 
+                         VerticalAlignment="Center" 
+                         HorizontalContentAlignment="Right"
+                         TextChanged="TxbWait_TextChanged"
+                         PreviewTextInput="Txb_LimitOnlyNumver"/>
+                <Label Grid.Row="5" 
+                       Grid.Column="4" 
+                       Content="ms" 
+                       VerticalAlignment="Center"/>
+                <Button Grid.Row="5" 
+                        Grid.Column="5" 
+                        x:Name="Btn_SetRight"  
+                        Content="set" 
+                        Margin="5,5,5,5" 
+                        Click="Btn_Set_Click"/>
 
-                <Button Grid.Row="7" Grid.Column="5" x:Name="BtnDebug"  Content="Debug" Margin="5,5,5,5" Click="BtnDebug_Click"/>
+                
+                <Button Grid.Row="7" 
+                        Grid.Column="5" 
+                        x:Name="BtnDebug"  
+                        Content="Debug" 
+                        Margin="5,5,5,5" 
+                        Click="BtnDebug_Click"/>
 
             </Grid>
 
@@ -87,7 +150,16 @@
 
             <!--**********************************************************-->
             <Grid Grid.Row="1">
-                <DataGrid x:Name="DG_Sequence" IsReadOnly="True" SelectionMode="Single" VerticalScrollBarVisibility="Auto">
+                <DataGrid x:Name="DG_Sequence" 
+                          IsReadOnly="True" 
+                          SelectionMode="Single" 
+                          RowHeaderWidth="0"
+                          VerticalScrollBarVisibility="Visible" 
+                          AlternationCount="2"
+                          AlternatingRowBackground="AliceBlue"
+                          GridLinesVisibility="Vertical"
+                          VerticalGridLinesBrush="LightGray"
+                          CanUserSortColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Item" Binding="{Binding Item}" Width="4*"/>
                         <DataGridTextColumn Header="Time" Binding="{Binding Time}" Width="3*"/>

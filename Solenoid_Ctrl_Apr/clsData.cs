@@ -8,8 +8,8 @@ namespace Solenoid_Ctrl_Apr
 {
     class clsData
     {
-        public string Item;
-        public int time;
-        public string Unit;
+        public string Item { get; set; }
+        public int Time { get; set; }
+        public string Unit { get; set; }
     }
 }
