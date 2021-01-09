@@ -13,3 +13,5 @@ D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.cspr
 D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.csproj.CoreCompileInputs.cache
 D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.exe
 D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Solenoid_Ctrl_Apr.pdb
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Window1.g.cs
+D:\_git\BPS\Solenoid_Ctrl_Apr\Solenoid_Ctrl_Apr\obj\Debug\Window1.baml
