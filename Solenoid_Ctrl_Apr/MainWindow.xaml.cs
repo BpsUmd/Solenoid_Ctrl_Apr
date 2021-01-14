@@ -63,7 +63,12 @@ namespace Solenoid_Ctrl_Apr
         //********************************************************************
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
+            string str;
+            int LoopNum = DG_Sequence.Items.Count;
+            for(int i = 0; i < LoopNum; i++)
+            {
 
+            }
         }
 
         //********************************************************************
