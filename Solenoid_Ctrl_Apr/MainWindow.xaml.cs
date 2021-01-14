@@ -46,26 +46,13 @@ namespace Solenoid_Ctrl_Apr
         //********************************************************************
         //********************************************************************
 
-
-
-
-        //********************************************************************
-        private void Btn_SetWait_Click(object sender, RoutedEventArgs e)
+        void Select_DG(DataGrid dg, int selectIndex)
         {
-
+            dg.Focus();
+            dg.SelectedIndex = selectIndex;
         }
 
-        //********************************************************************
-        private void Btn_SetLeft_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        //********************************************************************
-        private void Btn_SetRight_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         //********************************************************************
         private void BtnRead_Click(object sender, RoutedEventArgs e)
@@ -168,9 +155,28 @@ namespace Solenoid_Ctrl_Apr
             //最終行にスクロール
             DG_Sequence.ScrollIntoView(DG_Sequence.Items.GetItemAt(DG_Sequence.Items.Count - 1));
 
+            Select_DG(DG_Sequence, DG_Sequence.Items.Count - 1);
+
+            BtnDel.IsEnabled = true;
             BtnSave.IsEnabled = true;
             BtnRun.IsEnabled = true;
         }
 
+        //********************************************************************
+        private void BtnDel_Click(object sender, RoutedEventArgs e)
+        {
+            int SelectIndex = DG_Sequence.SelectedIndex;
+
+            if (SelectIndex < 0)
+                MessageBox.Show("選択無し");
+            DG_Sequence.Items.Remove(DG_Sequence.Items[SelectIndex]);
+
+            Select_DG(DG_Sequence, DG_Sequence.Items.Count - 1);
+
+            if (DG_Sequence.Items.Count <= 0 || SelectIndex < 0)
+                BtnDel.IsEnabled = false;
+        }
     }
+
+
 }

@@ -14,7 +14,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--***************************************-->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -22,7 +22,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="10"/>
             </Grid.RowDefinitions>
-            
+
             <!--**********************************************************-->
             <Grid Grid.Column="0" Grid.Row="0">
                 <Grid.RowDefinitions>
@@ -45,7 +45,7 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="10"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <Label Grid.Row="1" 
                        Grid.Column="1" 
                        Content="wait" 
@@ -118,9 +118,17 @@
                         Margin="5,5,5,5" 
                         Click="Btn_Set_Click"/>
 
-                
+
                 <Button Grid.Row="7" 
                         Grid.Column="5" 
+                        x:Name="BtnDel"  
+                        Content="Delete" 
+                        IsEnabled="False"
+                        Margin="5,0,5,5" 
+                        Click="BtnDel_Click"/>
+
+                <Button Grid.Row="7" 
+                        Grid.Column="3" 
                         x:Name="BtnDebug"  
                         Content="Debug" 
                         Margin="5,5,5,5" 
@@ -189,7 +197,7 @@
 
             </Grid>
         </Grid>
-        
+
 
     </Grid>
 </Window>
