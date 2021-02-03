@@ -57,7 +57,7 @@
                          Text="100" 
                          VerticalAlignment="Center" 
                          HorizontalContentAlignment="Right" 
-                         TextChanged="TxbWait_TextChanged"
+                         TextChanged="Txb_TextChanged"
                          PreviewTextInput="Txb_LimitOnlyNumver"/>
                 <Label Grid.Row="1" 
                        Grid.Column="4" 
@@ -72,16 +72,16 @@
 
                 <Label Grid.Row="3" 
                        Grid.Column="1" 
-                       Content="Left" 
+                       Content="Sol0" 
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Right"/>
-                <TextBox x:Name="TxbLeft" 
+                <TextBox x:Name="TxbSol0" 
                          Grid.Row="3" 
                          Grid.Column="3" 
                          Text="100" 
                          VerticalAlignment="Center" 
                          HorizontalContentAlignment="Right"
-                         TextChanged="TxbWait_TextChanged"
+                         TextChanged="Txb_TextChanged"
                          PreviewTextInput="Txb_LimitOnlyNumver"/>
                 <Label Grid.Row="3" 
                        Grid.Column="4" 
@@ -89,23 +89,23 @@
                        VerticalAlignment="Center"/>
                 <Button Grid.Row="3" 
                         Grid.Column="5" 
-                        x:Name="Btn_SetLeft"  
+                        x:Name="Btn_SetSol0"  
                         Content="set" 
                         Margin="5,5,5,5" 
                         Click="Btn_Set_Click"/>
 
                 <Label Grid.Row="5" 
                        Grid.Column="1" 
-                       Content="Right" 
+                       Content="Sol1" 
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Right"/>
-                <TextBox x:Name="TxbRight" 
+                <TextBox x:Name="TxbSol1" 
                          Grid.Row="5" 
                          Grid.Column="3" 
                          Text="100" 
                          VerticalAlignment="Center" 
                          HorizontalContentAlignment="Right"
-                         TextChanged="TxbWait_TextChanged"
+                         TextChanged="Txb_TextChanged"
                          PreviewTextInput="Txb_LimitOnlyNumver"/>
                 <Label Grid.Row="5" 
                        Grid.Column="4" 
@@ -113,7 +113,7 @@
                        VerticalAlignment="Center"/>
                 <Button Grid.Row="5" 
                         Grid.Column="5" 
-                        x:Name="Btn_SetRight"  
+                        x:Name="Btn_SetSol1"  
                         Content="set" 
                         Margin="5,5,5,5" 
                         Click="Btn_Set_Click"/>

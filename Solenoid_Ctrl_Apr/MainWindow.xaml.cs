@@ -19,9 +19,25 @@ using System.Text.RegularExpressions;//電話番号の入力制限用
 
 namespace Solenoid_Ctrl_Apr
 {
-    /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
-    /// </summary>
+   public struct _BtnName
+    {
+        public const string WAIT = "TxbWait";
+        public const string SOL0 = "TxbSol0";
+        public const string SOL1 = "TxbSol1";
+
+        public enum EnmTest
+        {
+            Enm0,
+            Enm1,
+            Enm2
+        };
+
+        public const string Test0 = "00";
+        public const string Test1 = "11";
+        public const string Test2 = "22";
+        public const string TestA = "AA";
+    }
+
     public partial class MainWindow : Window
     {
         clsData cls_Data = new clsData();
@@ -32,6 +48,7 @@ namespace Solenoid_Ctrl_Apr
             //var dataList = new ObservableCollection<clsData>();
 
             //DG_Sequence.ItemsSource = dataList;
+
         }
 
         //********************************************************************
@@ -39,7 +56,17 @@ namespace Solenoid_Ctrl_Apr
         //********************************************************************
         private void BtnDebug_Click(object sender, RoutedEventArgs e)
         {
-            SetItem("test", 100);
+            MessageBox.Show(int.Parse(_BtnName.Test0).ToString());
+            MessageBox.Show(int.Parse(_BtnName.Test1).ToString());
+            MessageBox.Show(int.Parse(_BtnName.Test2).ToString());
+            try
+            {
+                MessageBox.Show(int.Parse(_BtnName.TestA).ToString());
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Err");
+            }
         }
 
         //********************************************************************
@@ -74,7 +101,7 @@ namespace Solenoid_Ctrl_Apr
         //********************************************************************
         private void BtnRun_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         //********************************************************************
@@ -88,7 +115,7 @@ namespace Solenoid_Ctrl_Apr
 
 
         //********************************************************************
-        private void TxbWait_TextChanged(object sender, TextChangedEventArgs e)
+        private void Txb_TextChanged(object sender, TextChangedEventArgs e)
         {
             var Txb = (TextBox)sender;
             string strVal = Txb.Text;
@@ -98,17 +125,17 @@ namespace Solenoid_Ctrl_Apr
 
             switch (Txb.Name)
             {
-                case "TxbWait":
+                case _BtnName.WAIT:
                     if (Btn_SetWait != null)
                         Btn_SetWait.IsEnabled = blBtnEnable;
                     break;
-                case "TxbLeft":
-                    if (Btn_SetLeft != null)
-                        Btn_SetLeft.IsEnabled = blBtnEnable;
+                case _BtnName.SOL0:
+                    if (Btn_SetSol0 != null)
+                        Btn_SetSol0.IsEnabled = blBtnEnable;
                     break;
-                case "TxbRight":
-                    if (Btn_SetRight != null)
-                        Btn_SetRight.IsEnabled = blBtnEnable;
+                case _BtnName.SOL1:
+                    if (Btn_SetSol1 != null)
+                        Btn_SetSol1.IsEnabled = blBtnEnable;
                     break;
             }
 
@@ -127,13 +154,13 @@ namespace Solenoid_Ctrl_Apr
                     if (Btn_SetWait != null)
                         strVal = TxbWait.Text + e.Text;
                     break;
-                case "TxbLeft":
-                    if (TxbLeft != null)
-                        strVal = TxbLeft.Text + e.Text;
+                case "TxbSol0":
+                    if (TxbSol0 != null)
+                        strVal = TxbSol0.Text + e.Text;
                     break;
-                case "TxbRight":
-                    if (TxbRight != null)
-                        strVal = TxbRight.Text + e.Text;
+                case "TxbSol1":
+                    if (TxbSol1 != null)
+                        strVal = TxbSol1.Text + e.Text;
                     break;
             }
 
@@ -150,11 +177,11 @@ namespace Solenoid_Ctrl_Apr
                 case "Btn_SetWait":
                     SetItem("Wait", int.Parse(TxbWait.Text));
                     break;
-                case "Btn_SetLeft":
-                    SetItem("Left", int.Parse(TxbLeft.Text));
+                case "Btn_SetSol0":
+                    SetItem("Sol0", int.Parse(TxbSol0.Text));
                     break;
-                case "Btn_SetRight":
-                    SetItem("Right", int.Parse(TxbRight.Text));
+                case "Btn_SetSol1":
+                    SetItem("Sol1", int.Parse(TxbSol1.Text));
                     break;
             }
             //最終行にスクロール
@@ -182,6 +209,5 @@ namespace Solenoid_Ctrl_Apr
                 BtnDel.IsEnabled = false;
         }
     }
-
 
 }
